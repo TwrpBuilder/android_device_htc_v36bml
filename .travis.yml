@@ -32,3 +32,7 @@ deploy:
     tags: false
     repo: TwrpBuilder/android_device_htc_htc_v36bml_dugl
     branch: master
+
+branches:
+  except:
+    - /^(?i:untagged)-.*$/
