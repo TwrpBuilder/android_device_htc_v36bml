@@ -16,10 +16,10 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-PRODUCT_COPY_FILES += device/htc/htc_v36bml_dugl/kernel:kernel
+PRODUCT_COPY_FILES += device/htc/v36bml/kernel:kernel
 
-PRODUCT_DEVICE := htc_v36bml_dugl
-PRODUCT_NAME := omni_htc_v36bml_dugl
+PRODUCT_DEVICE := v36bml
+PRODUCT_NAME := omni_v36bml
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC Desire 628 dual simhtc_v36bml_dugl
+PRODUCT_MODEL := HTC Desire 628 dual sim
 PRODUCT_MANUFACTURER := htc

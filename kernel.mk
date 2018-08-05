@@ -15,7 +15,7 @@
 #
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/htc/htc_v36bml_dugl/kernel
+TARGET_PREBUILT_KERNEL := device/htc/v36bml/kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidusb.pid=0x05D8 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048

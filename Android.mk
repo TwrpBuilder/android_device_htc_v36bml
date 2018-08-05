@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter htc_v36bml_dugl,$(TARGET_DEVICE)),)
+ifneq ($(filter v36bml,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/htc/htc_v36bml_dugl
+LOCAL_PATH := device/htc/v36bml
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

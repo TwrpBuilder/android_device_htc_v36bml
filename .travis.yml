@@ -9,18 +9,18 @@ before_script:
   -O $HOME/twrp.tar.xz
 - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_htc_htc_v36bml_dugl.git device/htc/htc_v36bml_dugl
+  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_htc_v36bml.git device/htc/v36bml
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - rm -rf bootable/recovery && git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery
   - |
     docker run --rm -i -v "$(pwd):/root/twrp/:rw,z" surendrajat/twrp-builder bash << EOF
     cd /root/twrp/
-    source build/envsetup.sh && lunch omni_htc_v36bml_dugl-userdebug && make -j16 recoveryimage
+    source build/envsetup.sh && lunch omni_v36bml-userdebug && make -j16 recoveryimage
     exit
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/htc_v36bml_dugl/recovery.img $HOME/twrp/TWRP-$version-htc_v36bml_dugl-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/v36bml/recovery.img $HOME/twrp/TWRP-$version-v36bml-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
@@ -30,7 +30,7 @@ deploy:
   file: $HOME/twrp/*.img
   on:
     tags: false
-    repo: TwrpBuilder/android_device_htc_htc_v36bml_dugl
+    repo: TwrpBuilder/android_device_htc_v36bml
     branch: master
 
 branches:

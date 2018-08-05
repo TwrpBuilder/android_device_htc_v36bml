@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/htc/htc_v36bml_dugl
+LOCAL_PATH := device/htc/v36bml
 
 TARGET_BOARD_PLATFORM := mt6753
-TARGET_BOOTLOADER_BOARD_NAME := htc_v36bml_dugl
+TARGET_BOOTLOADER_BOARD_NAME := v36bml
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -26,5 +26,5 @@ BOARD_FLASH_BLOCK_SIZE := 1000000
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_EXCLUDE_SUPERSU := true
 include $(LOCAL_PATH)/kernel.mk
-include device/htc/htc_v36bml_dugl/BoardConfig64.mk
-TARGET_RECOVERY_FSTAB := device/htc/htc_v36bml_dugl/recovery.fstab
+include device/htc/v36bml/BoardConfig64.mk
+TARGET_RECOVERY_FSTAB := device/htc/v36bml/recovery.fstab

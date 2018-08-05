@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/htc/htc_v36bml_dugl
+LOCAL_PATH := device/htc/v36bml
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_htc_v36bml_dugl.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_v36bml.mk
